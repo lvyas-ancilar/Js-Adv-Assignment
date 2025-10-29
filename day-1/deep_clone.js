@@ -7,6 +7,9 @@ const obj = {
         ward : 100
     },
     hobbies : ["football" , "cricket" , "fifa"],
+    greet(){
+       return  console.log("Heello")
+    }
 }
 
 function deepClone(obj){
@@ -15,6 +18,9 @@ function deepClone(obj){
         const  data  = obj[key];
         if(typeof data  === 'object' &&  data !== null){
            result[key] =  deepClone(data) 
+        }
+        else if (typeof data === 'function'){
+            result[key] = data()
         }
         else{
             result[key] = data

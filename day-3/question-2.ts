@@ -2,11 +2,11 @@ function filterByType<T>(arr: unknown[], type: 'string' | 'number' | 'boolean' |
   const result: T[] = [];
 
   for (const item of arr) {
-    if (type === 'object') {
+    
       if (typeof item === 'object' && item !== null) {
         result.push(item as T);
       }
-    } else {
+     else {
       if (typeof item === type) {
         result.push(item as T);
       }

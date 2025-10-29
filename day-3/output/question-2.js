@@ -1,10 +1,8 @@
 function filterByType(arr, type) {
     const result = [];
     for (const item of arr) {
-        if (type === 'object') {
-            if (typeof item === 'object' && item !== null) {
-                result.push(item);
-            }
+        if (typeof item === 'object' && item !== null) {
+            result.push(item);
         }
         else {
             if (typeof item === type) {
